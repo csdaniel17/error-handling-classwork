@@ -1,7 +1,7 @@
 function asyncAdd(x, y, callback) {
   setTimeout(function() {
     if (typeof x !== 'number' || typeof y !== 'number') {
-      console.log(new Error('arguments must be numbers'));
+      callback(new Error('arguments must be numbers'));
       return;
     }
     callback(null, x + y);
